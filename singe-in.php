@@ -7,11 +7,9 @@ $user = $pre->fetch(PDO::FETCH_ASSOC);
 if(empty($user)){ //vérifie si le resultat est vide !
     //non connecté
     echo "Utilisateur ou mot de passe incorrect !";
+    header('Location:inscription.php');//on le redirige sur la page d'accueil du site !
 }else{
     $_SESSION['user'] = $user; //on enregistre que l'utilisateur est connecté
     header('Location:index.php');
 }
-
-//header('Location:inscription.php');//on le redirige sur la page d'accueil du site !
-
 ?>
