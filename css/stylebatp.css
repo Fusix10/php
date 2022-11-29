@@ -1,0 +1,44 @@
+body{
+  background-image: url(../img/band.jpg);
+  background-size: 17%;
+}
+
+h2{
+  text-align: center;
+  padding-top: 25px;
+  font-weight:bold;
+  margin-bottom: 0px;
+}
+
+h3{
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+dnd_text{
+  text-align: center !important;
+}
+.row{
+  margin-bottom: auto;
+  
+}
+
+.dndcontent1{
+  align-items: center;
+  justify-content: center;
+}
+.dndimg{
+  width: 100%;
+  border: 4mm ridge rgba(38, 38, 38, .6);
+  border-width: auto;
+  border-height: auto;
+  
+}
+.parallax-container {
+  height: 500px;
+}
+
+p{
+  font-size: 18px;
+}
