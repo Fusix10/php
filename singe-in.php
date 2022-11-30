@@ -2,14 +2,10 @@
 require_once "Session_Start.php"; 
 
 if(empty($_POST['name'])){
-    $_SESSION['error']="Pseudo vide, veuillez réessayer";
     header('Location:index.php');
-    exit();
-
+    $_SESSION['error']="Pseudo vide, veuillez réessayer";
 }elseif(empty($_POST['password'])){
     $_SESSION['error']="Password vide, veuillez réessayer";
-    header('Location:index.php');
-    exit(); 
 }
 
 $sql = "SELECT * FROM user WHERE name='".$_POST['name']."' AND password='".$_POST['password']."'"; 

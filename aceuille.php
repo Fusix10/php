@@ -23,6 +23,7 @@ if(isset($_SESSION['user'])){
           <a class="brand-logo right">Mon site</a>
           <img class="brand-logo circle responsive-img center" height="auto" width="auto" src="../img/dino.png">
           <ul id="nav-mobile" data-target="dropdown1" class="hide-on-med-and-down">
+            <li><a href="singe-out.php">Déconnecté</a></li>
             <li><a href="minecraft.php">Project MC</a></li>
             <li><a href="project_baptiste.php">Projet Baptiste</a></li>
             <li><a href="project_alex.php">Projet Alexandre</a></li>
@@ -32,6 +33,7 @@ if(isset($_SESSION['user'])){
             <i class="material-icons menu">menu</i>
           </a>
           <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="singe-out.php">Déconnecté</a></li>
             <li><a href="minecraft.php">Project MC</a></li>
             <li><a href="project_baptiste.php">Projet Baptiste</a></li>
             <li><a href="project_alex.php">Projet Alexandre</a></li>
@@ -45,6 +47,7 @@ if(isset($_SESSION['user'])){
           <a class="brand-logo right">Mon site</a>
           <img class="brand-logo circle responsive-img center" height="auto" width="auto" src="../img/dino.png">
           <ul id="nav-mobile" data-target="dropdown1" class="hide-on-med-and-down">
+            <li><a href="singe-out.php">Déconnecté</a></li>            
             <li><a href="minecraft.php">Project MC</a></li>
             <li><a href="project_baptiste.php">Projet Baptiste</a></li>
             <li><a href="project_alex.php">Projet Alexandre</a></li>
@@ -53,6 +56,7 @@ if(isset($_SESSION['user'])){
             <i class="material-icons menu">menu</i>
           </a>
           <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="singe-out.php">Déconnecté</a></li>
             <li><a href="minecraft.php">Project MC</a></li>
             <li><a href="project_baptiste.php">Projet Baptiste</a></li>
             <li><a href="project_alex.php">Projet Alexandre</a></li>
@@ -182,4 +186,4 @@ if(isset($_SESSION['user'])){
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
-<?php } ?>
+<?php }else{ header('Location:index.php'); } ?>

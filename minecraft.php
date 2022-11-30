@@ -1,7 +1,12 @@
+<?php
+require_once "Session_Start.php"
+?>
+<?php
+if(isset($_SESSION['user'])){
+?>
 <!DOCTYPE html>
 <html>
 <?php
-session_start();
   
 $pdo = new PDO(
     'mysql:host=localhost;dbname=grpb11;',
@@ -63,5 +68,5 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
     integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-
 </html>
+<?php }else{ header('Location:index.php'); } ?>
