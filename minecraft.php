@@ -27,7 +27,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
         <a class="brand-logo right main_title" onclick="Show()">Projet Minecraft</a>
         <img class="brand-logo circle responsive-img center" height="auto" width="10%" src="../img/minecraftlogo.png">
         <ul id="nav-mobile" class="hide-on-med-and-down">
-          <li><a href="index.php">Accueil</a></li>
+          <li><a href="aceuille.php">Accueil</a></li>
         </ul>
       </div>
     </nav>

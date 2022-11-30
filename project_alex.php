@@ -26,7 +26,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
         <a class="brand-logo right main_title" onclick="Show()">Projet Alex</a>
         <img class="brand-logo circle responsive-img center" height="auto" width="10%" src="../img/logolucide.jpg">
         <ul id="nav-mobile">
-          <li><a href="index.php">Accueil</a></li>
+          <li><a href="aceuille.php">Accueil</a></li>
         </ul>
       </div>
     </nav>

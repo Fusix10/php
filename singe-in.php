@@ -1,5 +1,17 @@
 <?php 
 require_once "Session_Start.php"; 
+
+if(empty($_POST['name'])){
+    $_SESSION['error']="Pseudo vide, veuillez réessayer";
+    header('Location:index.php');
+    exit();
+
+}elseif(empty($_POST['password'])){
+    $_SESSION['error']="Password vide, veuillez réessayer";
+    header('Location:index.php');
+    exit(); 
+}
+
 $sql = "SELECT * FROM user WHERE name='".$_POST['name']."' AND password='".$_POST['password']."'"; 
 $pre = $pdo->prepare($sql); 
 $pre->execute();
@@ -7,9 +19,9 @@ $user = $pre->fetch(PDO::FETCH_ASSOC);
 if(empty($user)){ //vérifie si le resultat est vide !
     //non connecté
     echo "Utilisateur ou mot de passe incorrect !";
-    header('Location:inscription.php');//on le redirige sur la page d'accueil du site !
+    header('Location:index.php');//on le redirige sur la page d'accueil du site !
 }else{
     $_SESSION['user'] = $user; //on enregistre que l'utilisateur est connecté
-    header('Location:index.php');
+    header('Location:aceuille.php');
 }
 ?>

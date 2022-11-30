@@ -27,7 +27,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
         <a class="brand-logo right main_title" onclick="Show()">Projet Baptiste</a>
         <img class="brand-logo circle responsive-img center" height="auto" width="10%" src="../img/dnd.png">
         <ul id="nav-mobile">
-          <li><a href="index.php">Accueil</a></li>
+          <li><a href="aceuille.php">Accueil</a></li>
         </ul>
       </div>
     </nav>
@@ -36,7 +36,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
       <div class="row container">
         <h2 class="header">Projet D&D</h2>
         <div class="row">
-          <div class="col l12 s12"
+          <div class="col l12 s12">
             <p class="grey-text text-darken-3 lighten-3">Donjons et Dragons (en anglais Dungeons & Dragons), souvent abrégé en D&D, DnD ou AD&D, est le tout premier jeux de rôle sur table de genre médiéval-fantastique.</p>
           </div>
         </div>
