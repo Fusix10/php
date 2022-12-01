@@ -4,10 +4,10 @@ if($_SESSION['user']['admin'] == 0){
     header('Location:index.php');
     exit();
 }
-$sql = "UPDATE user SET name=:name WHERE id=:id";
+$sql = "UPDATE user SET password=:password WHERE id=:id";
 $dataBinded=array(
     ':id'   => $_POST['id'],
-    ':name'   => $_POST['name'],
+    ':password'   => $_POST['password'],
 );
 $pre = $pdo->prepare($sql); 
 $pre->execute($dataBinded);
