@@ -17,53 +17,7 @@ if(isset($_SESSION['user'])){
 <body class="grey darken-2">
   </body>
   <div class="navbar-fixed">
-    <?php if($_SESSION['user']['admin'] == 1){ ?>
-      <nav class="black">
-        <div class="nav-wrapper container">
-          <a class="brand-logo right">Mon site</a>
-          <img class="brand-logo circle responsive-img center" height="auto" width="auto" src="../img/dino.png">
-          <ul id="nav-mobile" data-target="dropdown1" class="hide-on-med-and-down">
-            <li><a href="singe-out.php">Déconnecté</a></li>
-            <li><a href="minecraft.php">Project MC</a></li>
-            <li><a href="project_baptiste.php">Projet Baptiste</a></li>
-            <li><a href="project_alex.php">Projet Alexandre</a></li>
-            <li><a href="panel_admin.php">Admin</a></li>
-          </ul>
-          <a class="dropdown-trigger btn hide-on-med-and-up black" href='#' data-target='dropdown1'>
-            <i class="material-icons menu">menu</i>
-          </a>
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="singe-out.php">Déconnecté</a></li>
-            <li><a href="minecraft.php">Project MC</a></li>
-            <li><a href="project_baptiste.php">Projet Baptiste</a></li>
-            <li><a href="project_alex.php">Projet Alexandre</a></li>
-            <li><a href="panel_admin.php">Admin</a></li>
-          </ul>
-        </div>
-      </nav>
-    <?php }elseif($_SESSION['user']['admin'] == 0){ ?>
-      <nav class="black">
-        <div class="nav-wrapper container">
-          <a class="brand-logo right">Mon site</a>
-          <img class="brand-logo circle responsive-img center" height="auto" width="auto" src="../img/dino.png">
-          <ul id="nav-mobile" data-target="dropdown1" class="hide-on-med-and-down">
-            <li><a href="singe-out.php">Déconnecté</a></li>            
-            <li><a href="minecraft.php">Project MC</a></li>
-            <li><a href="project_baptiste.php">Projet Baptiste</a></li>
-            <li><a href="project_alex.php">Projet Alexandre</a></li>
-          </ul>
-          <a class="dropdown-trigger btn hide-on-med-and-up black" href='#' data-target='dropdown1'>
-            <i class="material-icons menu">menu</i>
-          </a>
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="singe-out.php">Déconnecté</a></li>
-            <li><a href="minecraft.php">Project MC</a></li>
-            <li><a href="project_baptiste.php">Projet Baptiste</a></li>
-            <li><a href="project_alex.php">Projet Alexandre</a></li>
-          </ul>
-        </div>
-      </nav>
-    <?php } ?>  
+    <?php require "navbar.php"; ?>  
   </div>
   <div class="row">
     <div class="col l1 banner black hide-on-med-and-down">
@@ -136,41 +90,35 @@ if(isset($_SESSION['user'])){
     <footer class="page-footer black">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12">
-            
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <form action="" method="post">
+              <div class="col l6 s12">
                 <label for="first_name">First Name</label>
+                <input id="first_name" type="text" class="validate">
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
                 <label for="last_name">Last Name</label>
+                <input id="last_name" type="text" class="validate">
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                <label for="disabled">Disabled</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
                 <label for="email">Email</label>
+                <input id="email" type="email" class="validate">
               </div>
             </div>
             <div class="row">
               <div class="col s12">
                 This is an inline input field:
                 <div class="input-field inline">
-                  <input id="email_inline" type="email" class="validate">
                   <label for="email_inline">Email</label>
+                  <input id="email_inline" type="email" class="validate">
                   <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
                 </div>
               </div>
             </div>
-            </form>
-          </div>
+          </form>
         </div>
+      </div>
         
       </div>
       <div class="footer-copyright">
