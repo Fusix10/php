@@ -41,7 +41,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
       <div class="row container">
         <h2 class="header">Projet MINECRAFT</h2>
         <div class="row">
-          <div class="col l12 s12"
+          <div class="col l12 s12">
             <p class="grey-text text-darken-3 lighten-3">Minecraft est un jeu vidéo de type aventure « bac à sable » (construction complètement libre) développé par le Suédois Markus Persson, alias Notch, puis par la société Mojang Studios. Il s'agit d'un univers composé de voxels et généré de façon procédurale, qui intègre un système d'artisanat axé sur l'exploitation puis la transformation de ressources naturelles (minéralogiques, fossiles, animales et végétales)..</p>
           </div>
         </div>

@@ -40,7 +40,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
       <div class="row container">
         <h1 class="header">Lucide dream</h1>
         <div class="row">
-          <div class="col l12 s12"
+          <div class="col l12 s12">
             <p class="grey-text text-darken-3 lighten-3">Quesque les rêve lucide ?, c'est quand on se rend compte lors d'un rêve que on rêve et que on prend conscience que nous rêve, aprés cela il vous est possible de faire absolument tout se que vous voulez avec les exacte même sensation que dans la vrais vie voir en mieux ! </p>
           </div>
         </div>

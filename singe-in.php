@@ -8,7 +8,7 @@ if(empty($_POST['name'])){
     $_SESSION['error']="Password vide, veuillez réessayer";
 }
 
-$sql = "SELECT * FROM user WHERE name='".$_POST['name']."' AND password='".$_POST['password']."'"; 
+$sql = "SELECT * FROM user WHERE name='".$_POST['name']."' AND password='".sha1($_POST['password'])."'"; 
 $pre = $pdo->prepare($sql); 
 $pre->execute();
 $user = $pre->fetch(PDO::FETCH_ASSOC);

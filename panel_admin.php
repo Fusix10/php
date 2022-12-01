@@ -52,6 +52,10 @@ require_once "Session_Start.php"
                 <input type='hidden' name='id' value="<?php echo $user['id'] ?>"/>
                 <input type='submit' value='confirmé' />
             </form>
+            <form method="post" action="userdestroy.php">
+                <input type='hidden' name='id' value="<?php echo $user['id'] ?>" />
+                <input type='submit' value="delette:<?php echo $user['name'] ?>" />
+            </from>
             <h2>mdp</h2> 
             <?php echo $user['password'] ?>
             <form method="post" action="adminpassword.php" enctype="multipart/form-data">
@@ -71,7 +75,7 @@ require_once "Session_Start.php"
                 <input type="hidden" name="admin" value="<?php echo $user['admin']==1?0:1 ?>" />
                 <input type='hidden' name='id' value="<?php echo $user['id'] ?>"/>
                 <input type='submit' value='switch admin' />
-            </form>
+            </form>    
         </div>
         
         <?php } ?>
