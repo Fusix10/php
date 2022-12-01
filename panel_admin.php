@@ -16,9 +16,9 @@ require_once "Session_Start.php"
         <div class="bloc_user">
             <h2>Pseudo</h2>
             <?php echo $user['name'] ?>
-            <form method="post" action="admin.php">
-                <input type='text' name='name' />
-                <input type='hidden' value="<?php $user['id'] ?>"/>
+            <form method="post" action="admin.php" enctype="multipart/from-data">
+                <input type='text' name='name' value="<?php echo $user['name'] ?>" />
+                <input type='hidden' name='id' value="<?php echo $user['id'] ?>"/>
                 <input type='submit' value='confirmé' />
             </form>
             <h2>mdp</h2> 
