@@ -8,16 +8,17 @@ if(empty($_POST['name'])){
     $_SESSION['error']="Password vide, veuillez réessayer";
 }
 
-$sql = "SELECT * FROM user WHERE name='".$_POST['name']."' AND password='".sha1($_POST['password'])."'"; 
+$sql = "SELECT * FROM user WHERE name=:name AND password=sha1(:password)"; 
 $pre = $pdo->prepare($sql); 
+$pre->bindParam(":name",$_POST['name'])
+$pre->bindParam(":password",$_POST['password'])
 $pre->execute();
 $user = $pre->fetch(PDO::FETCH_ASSOC);
-if(empty($user)){ //vérifie si le resultat est vide !
-    //non connecté
+if(empty($user)){
     echo "Utilisateur ou mot de passe incorrect !";
-    header('Location:index.php');//on le redirige sur la page d'accueil du site !
+    header('Location:index.php');
 }else{
-    $_SESSION['user'] = $user; //on enregistre que l'utilisateur est connecté
+    $_SESSION['user'] = $user; 
     header('Location:aceuille.php');
 }
 ?>
